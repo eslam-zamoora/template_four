@@ -1,0 +1,295 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+
+.heading h2{
+    font-weight: 800;
+    font-size: 40px;
+    text-align: center;
+    padding: 30px auto;
+}
+/* start van bar */
+.navbar-nav .nav-link{
+    position: relative;
+    padding-left: 0 !important;
+    padding-right: 15px;
+    color: black;
+}
+.navbar-nav .nav-link::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: black;
+    transition: width 0.3s;
+}
+.navbar-nav .nav-link.active::after{
+    width: 60%;
+}
+/* start home */
+.home{
+    background: url(../img/bg.jpg) fixed center;
+    background-size: cover;
+}
+
+.home .icons span{
+    display: inline-block;
+    font-size: 14px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    line-height: 35px;
+    cursor: pointer;
+}
+.home .text h2{
+    font-size: 45px;
+}
+.home .text p{
+    font-size: 55px;
+
+}
+.home .text p::after{
+    content: "|";
+    animation: designer 9s linear infinite;
+}
+@keyframes designer{
+    0%{
+        content: "Larry Daneils";
+    }
+    10%{
+        content: "Larry Daneils";
+    }
+    15%{
+        content: "Larry";
+    }
+    20%{
+        content: "|";
+    }
+    40%{
+        content: "Designer";
+    }
+    50%{
+        content: "Des";
+    }
+    60%{
+        content: "|";
+    }
+    80%{
+        content: "Developer";
+    }
+    90%{
+        content: "Deve";
+    }
+    100%{
+        content: "|";
+    }
+
+}
+/* start about */
+.about .progress, .progress-stacked{
+    height: 1.5rem;
+}
+.about .btn{
+    border: 1px solid #1c1c1c;
+    padding: 10px 30px;
+    margin-right: 10px;
+}
+.about .btn1{
+    background-color: #1c1c1c;
+    color: white;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+.about .btn1:hover{
+    background-color: white;
+    color: #1c1c1c;
+}
+.about .btn2{
+    transition: all 0.3s;
+}
+.about .btn2:hover{
+    background-color: #1c1c1c;
+    color: white;
+}
+.about .img{
+    position: relative;
+}
+.about .img::after{
+    content: '';
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    background-image: url(../img/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+/* start services */
+.services .service-area span{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    line-height: 70px;
+    text-align: center;
+    font-size: 24px;
+    transition: all 0.3s;
+}
+.services .service-area .col:hover span{
+    background-color:#1c1c1c;
+    color: white;
+}
+
+/* start portfolio */
+.portfolio .nav-pills .nav-link{
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+    position: relative;
+}
+.portfolio .nav-pills .nav-link.active{
+    background-color: transparent;
+    position: relative;
+    transition: all 0.3s;
+}
+.portfolio .nav-pills .nav-link.active::after{
+    content: "";
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+    width: 60%;
+    height: 2px;
+    background-color: black;
+}
+.portfolio .img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    border: 5px solid rgb(201, 200, 200);
+    transition: all 0.3s;
+}
+.portfolio .img-overlay .txt{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+}
+.portfolio .img-overlay .txt span{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+    line-height: 30px;
+}
+.portfolio .img-overlay .txt h5{
+    transform: translateY(-10px);
+    transition: all 0.2s;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+.portfolio .img-overlay .txt .icon{
+    transform: translateY(10px);
+    transition:all 0.2s ease-out;
+    color: white;
+}
+.portfolio .col:hover .img-overlay{
+    visibility: visible;
+    background: rgba(255, 255, 255, 0.95);
+}
+.portfolio .col:hover .txt h5{
+    transform: translateY(0);
+}
+.portfolio .col:hover .txt .icon{
+    transform: translateY(0);
+}
+
+/* start client */
+#spc-h{
+    margin-bottom: 20%;
+}
+.client .carousel-indicators{
+   transform: translateY(50px);
+}
+.client .carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #869791;
+}
+/* start bloooog */
+.blog .carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #869791;
+}
+.blog .linkk{
+    position: relative;
+}
+.blog .linkk::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background-color:gray;
+}
+.blog .card img{
+    transition: all 0.3s;
+}
+.blog .card:hover img{
+    transform: scale(1.2);
+}
+.blog .carousel-indicators {
+    position: absolute;
+    top: calc(100% + 10px );
+}
+
+/* start contact */
+.contact .item span{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    background-color: #f4f4f4;
+    font-size: 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.contact .item span:hover{
+    background-color: #1c1c1c;
+    color: #eee;
+}
+.contact input , .contact textarea {
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+.contact .botn button{
+    background-color: #1c1c1c;
+    color: white;
+    transition: all 0.3s;
+    font-size: 16px;
+    border: 1px solid #1c1c1c;
+    padding: 10px 30px;
+    transition: all 0.3s;
+}
+.contact .botn button:hover{
+    background-color: white;
+    color: #1c1c1c;
+}
